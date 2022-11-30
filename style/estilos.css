@@ -1200,7 +1200,7 @@ textarea{
 
     .gridContainerIndex{
         grid-template-columns: 5% auto;
-        grid-template-rows: 135px 900px 1450px auto;
+        grid-template-rows: 135px 900px 1800px auto;
     }
 
 
