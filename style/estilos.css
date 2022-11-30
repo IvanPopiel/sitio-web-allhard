@@ -1,0 +1,1516 @@
+/*Segunda pre entrega: cambios*/
+/*se aplico mobile first en 3 breakpoints: 0-700px / 700-990px / 990-1135px formando asi version, mobile, tablet, desktop y desktop xl.
+ *las secciones que fueron alcanzadas por el mobile first con sus breakpoint son: index, categorias, nosotros y preguntas frecuentes.
+ *hay 4 html finalizados tanto en estilos como en responsive.
+ *se aplico grid area a todo el sitio, independientemente de que sea o no responsive la section, dentro se utilizo flex y grid en algunos casos.
+ *se uso una paleta de colores: #3A4750 / #303841 / #BE3144 / #D3D6DB /#fff.
+ *se aplicaron animaciones y transiciones con hover, (ej la barra de redes sociales desplgable).
+ *se colocaron img y text real.
+ *se utilizaron componentes de bootstrap 5, siendo estos un nav bar y un accordion.
+ *se modificaron las clases de bootstrap por default cuando era necesario ya que no se pisaban estas con clases propias
+ *con el fin de customizar los componentes, donde si pisaba se agregaron clases propias.
+ *se utilizo z index solo cuando fue indispensable ya que algunos componentes de bts 5 pasaban por arriba de mi css nativo.
+ *hasta poder ordenar mejor el contenido con sass se utilizara ---------------------------------------------------- para poder 
+ *marcar donde empiezan y terminan los estilos de por ej el nav o el footer
+*/
+
+/*estilos generales*/
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #D3D6DB;
+}
+/*escondo contenido*/
+
+.asideRedes{
+    display: none;
+}
+
+/*header y footer grid area para todas las section*/
+header{
+    grid-area: header;
+
+}
+footer{
+    grid-area: footer;
+}
+.asideRedes{
+    grid-area: asideRedes;
+}
+
+/*header*/
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+}
+.navSearch{
+    background-color: #2C3333;
+
+
+}
+.aLogo{
+    color: #D3D6DB;
+    font-size: 35px;
+}
+.aLogo:hover{
+    cursor: pointer;
+    color: #D3D6DB;
+}
+.estiloLogo{
+    color: #BE3144;
+}
+
+.botonBuscar{
+    color: #D3D6DB;
+    text-transform: capitalize;
+    border: 1px solid #BE3144;
+}
+.botonBuscar:hover{
+    background-color: #BE3144;
+    border: 1px solid #BE3144;
+}
+/*clases por default de bootstrap para modificar y customizar*/
+/*controla bkc y borde*/
+.navStyle{
+    background-color: #3A4750;
+    border-bottom: 6px solid #BE3144;
+}
+/*controla el flexbox*/
+.navbar-nav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+/*da padding lateral cuando es responsive*/
+#navbarSupportedContent{
+    padding-left: 25px;
+    padding-top: 10px;
+}
+/*da margin top-bottom tanto en responsive como desktop*/
+.nav-item{
+    margin: 5px 0;
+}
+/*ambas clases dropdown son para personalizar el drop*/
+.dropdown-menu{
+    background-color: #2C3333;
+    width:200px;
+}
+.dropdown-item{
+    color: #D3D6DB;
+}
+/*mis clases para el nav bar de bootstrap*/
+.navA{
+    text-decoration: none;
+    color: #D3D6DB;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.navA:hover {
+    color: #BE3144;
+}
+
+/*----------------------------------------------------*/
+
+
+/*FOOTER*/
+footer{
+    background-color: #3A4750;
+    padding: 50px 0 0 0;
+
+}
+/*grid secciones footer*/
+.sectionGridFoot{
+    display:grid;
+    grid-template-areas:
+    "sec"
+    "redes"
+    "textos"
+    "textos";
+}
+.secFooter{
+    grid-area: sec;
+}
+.redesFoot{
+    grid-area: redes;
+}
+.textFooter{
+    grid-area: textos;
+    padding-top: 10px;
+}
+/*fin de grid secciones footer*/
+.sectionFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+.FooterLi{
+
+    list-style-type: none;
+    padding-right: 32px;
+}
+.FooterA{
+    text-decoration: none;
+    /*color: #00aaad;*/
+    color: #D3D6DB;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.containerRedes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.iconoRedes{
+    margin: 30px 35px 0 35px;
+}
+
+.textFooter{
+    padding: 0px 50px;
+}
+.avisoFooter{
+    margin: 25px 0;
+    font-size: 17px;
+}
+.copyright{
+    margin-bottom: 15px;
+}
+footer p{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+    color: #D3D6DB;
+    padding-bottom: 15px;
+}
+
+
+/*----------------------------------------------------*/
+
+
+
+
+/*mobile first*/
+
+/*GRILLAS */
+
+/*GRILLA INDEX*/
+
+.gridContainerIndex{
+    display: grid;
+    grid-template-areas: 
+    "header      "
+    "contIndex   "
+    "sectionIndex"
+    "footer      ";
+    height: 100vh;
+    width: 100%;
+    
+}
+.contIndex{
+    grid-area: contIndex;
+
+
+}
+.sectionIndex{
+    grid-area: sectionIndex;
+
+}
+
+/*----------------------------------------------------*/
+
+/*GRILLA HARDWARE*/
+.gridContainerHardware{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "contHardware"
+    "footer";
+    gap: 5px;
+}
+
+.contHardware{
+    grid-area: contHardware;
+
+}
+
+/*----------------------------------------------------*/
+
+/*grilla - nosotros*/
+.gridContainerNosotros{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    "header      "
+    "contNosotros"
+    "footer      ";
+    gap: 5px;
+}
+
+.contNosotros{
+    grid-area: contNosotros;
+}
+
+/*----------------------------------------------------*/
+
+/*grilla - preguntas frecuentes*/
+
+.gridContainerPreguntasFrecuentes{
+    display: grid;
+    grid-template-areas: 
+    "header     "
+    "contPregFrec"
+    "formPregFrec"
+    "footer     ";
+    width: 100%;
+    height: 100vh;
+    gap: 5px;
+}
+
+.contPregFrec{
+    grid-area: contPregFrec;
+}
+.formPregFrec{
+    grid-area: formPregFrec;
+}
+
+/*----------------------------------------------------*/
+
+
+/*INDEX - MOBILE*/
+.carruselIndex{
+    margin-top: 130px;
+}
+
+.carruselImg{
+    width: 100%;
+    height: 400px;
+}
+.tittleNovedades{
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.containerCards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.card{
+
+    width: 400px;
+    height: 400px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    margin: 30px 0;
+    border-radius: 10px;
+
+}
+.card1{
+    background-image: url(../imagenes/cards/novedad1Mobile.png);
+}
+.card2{
+    background-image: url(../imagenes/cards/novedad2Mobile.jpg);
+}
+.card3{
+    background-image: url(../imagenes/cards/novedad3Mobile.jpg);
+}
+.card4{
+    background-image: url(../imagenes/cards/novedad4Mobile.jpg);
+}
+.card5{
+    background-image: url(../imagenes/cards/novedad5Mobile.jpg);
+}
+.card6{
+    background-image: url(../imagenes/cards/novedad6Mobile.png);
+}
+.card7{
+    background-image: url(../imagenes/cards/novedad7Mobile.jpg);
+}
+.card8{
+    background-image: url(../imagenes/cards/novedad8Mobile.jpg);
+}
+
+
+.cardButton{
+    text-decoration: none;
+    padding: 10px 55px 10px 55px;
+    background-color: #3A4750;
+    color: #D3D6DB;
+    border-radius: 10px;
+    text-transform: capitalize;
+
+}
+
+/*----------------------------------------------------*/
+
+/*HARDWARE - MOBILE*/
+.tittleHard{
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+
+
+.containerBotones{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 25px;    
+}
+.botonComponentes{
+    width: 23%;
+    border-radius: 10px;
+    background-color: #fff;
+    text-decoration: none;
+    margin: 15px 5px;
+    padding: 10px 8px 0 7px;
+    text-align: center;
+
+}
+.estiloBoton{
+
+    color: #2C3333;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: bolder;
+
+}
+button a{
+    text-decoration: none;
+}
+
+
+
+.containerProductos{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.marcoProducto{
+    
+    margin: 25px 0;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+
+.textProducto{
+    display: none;
+}
+.valor{
+    font-size: 25px;
+}
+
+.botonesComAgre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.botonComprar{
+    height: 50px;
+    width: 90%;
+    border-radius: 10px;
+    background-color: #BE3144;
+
+
+}
+
+.comprar{
+    padding-top: 4px;
+    font-size: 23px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: 7px;
+
+}
+
+.botonAgregar{
+    height: 50px;
+    width: 90%;
+    padding-top: 4px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: 2px solid #BE3144;
+    background-color: #fff;
+    
+}
+
+
+.botonAgregar a{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.carrito{
+    
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    padding-top: 2px;
+    
+}
+/*boton agregar*/
+.agregar{
+    font-size: 23px;
+    font-family: 'Roboto', sans-serif;
+    color: #BE3144;
+    text-transform: capitalize;
+    letter-spacing: 7px;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+/*----------------------------------------------------*/
+
+/*nosotros - mobile*/
+
+.tittleNosotros{
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    margin-top: 180px;
+    text-align: center;
+    font-size: 50px;
+
+
+}
+.containerNosotros{
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 75px;
+    margin: 75px 15px 0 15px;
+}
+.textoNosotros{
+    width:100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    text-align: center;
+    letter-spacing: 2px;
+    word-spacing: 8px;
+    margin: 10px 0;
+    padding: 10px;
+
+    
+}
+
+/*----------------------------------------------------*/
+
+/*Preguntas frecuentes - mobile*/
+.tittlePreg{
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+.accordion{
+    margin: 80px 50px 100px 50px;
+}
+.formPregFrec{
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 10px 20px 50px 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.tittleFormPreg{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 55px;
+}
+.containerFormInput{
+
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.inputFlex{
+    height: 40px;
+    width: 90%;
+    border-radius: 5px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 3px solid #BE3144;
+    border-right: 3px solid #BE3144;
+}
+.containerFormText{
+display: flex;
+justify-content: center;
+width: 100%;
+margin-top: 20px;
+margin-bottom: 25px;
+}
+textarea{
+    width: 90%;
+    height: 150px;
+    border: none;
+    border-bottom: 3px solid #BE3144;
+    border-right: 3px solid #BE3144;
+}
+
+.containerFormSubmit{
+    text-align: center;
+    opacity: 95%;
+    
+}
+.enviarForm{
+    width: 90%;
+    height: 40px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 4px;
+    background-color: #BE3144;
+    border-radius: 10px;
+}
+
+/*----------------------------------------------------*/
+
+/*fin del mobile*/
+
+/*media query - tablet*/
+
+@media (min-width:700px){
+
+    /*en la tablet las grid area sigue iguales por lo que no aparecer en esta media query y arrastramos las que usamos en mobile
+    */
+    /*index - tablet*/
+
+    .carruselIndex{
+        width: auto;
+        height: 400px;
+    }
+
+    .containerCards{
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: 0 20px;
+
+
+    }
+    
+    .card{
+        width: 300px;
+        height: 300px;   
+        
+        margin: 30px 15px;
+    
+    }
+    .card1{
+        background-image: url(../imagenes/cards/novedad1TabletDesktop.png); 
+    }
+    .card2{
+        background-image: url(../imagenes/cards/novedad2TabletDesktop.jpg); 
+    }
+    .card3{
+        background-image: url(../imagenes/cards/novedad3TabletDesktop.jpg); 
+    }
+    .card4{
+        background-image: url(../imagenes/cards/novedad4TabletDesktop.jpg);
+    }
+    .card5{
+        background-image: url(../imagenes/cards/novedad5TabletDesktop.jpg);
+    }
+    .card6{
+        background-image: url(../imagenes/cards/novedad6TabletDesktop.png);
+    }
+    .card7{
+        background-image: url(../imagenes/cards/novedad7TabletDesktop.jpg);
+    }
+    .card8{
+        background-image: url(../imagenes/cards/novedad8TabletDesktop.jpg);
+    }
+
+    /*----------------------------------------------------*/
+
+    /*hardware - tablet*/
+    .botonComponentes{
+        width: 20%;
+    }
+    
+    .estiloBoton{
+        font-size: 14px;
+    }
+    button a{
+        text-decoration: none;
+    }
+    .imgProduct{
+        width: 600px;
+    }
+    .informacionProducto{
+
+        display: flex;
+        flex-direction: column;
+        align-content: flex-end;
+        
+        text-align: center;
+        
+    }
+    .textProducto{
+        display: block;
+        font-family: 'Roboto', sans-serif;
+        text-align: justify;
+        font-size: 20px;
+        margin-bottom: 10px;
+        padding: 15px 15px 0 15px;      
+
+        
+    }
+    .botonesComAgre{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+
+    .botonComprar{
+        width: 40%;
+    }
+
+    .comprar{
+        letter-spacing: 4px;
+
+    }
+
+    .botonAgregar{
+        width: 40%;
+    }
+
+    /*boton agregar*/
+    .agregar{
+        letter-spacing: 4px;
+
+    }
+
+    /*----------------------------------------------------*/
+
+    /*nosotros - tablet*/
+
+    .tittleNosotros{
+        font-size: 40px;
+    
+    
+    }
+    .containerNosotros{
+        margin: 50px 35px 0 35px;
+    }
+    .textoNosotros{
+        font-size: 17px;
+        text-align: justify;
+        margin: 25px 0;
+    
+        
+    }
+
+    /*----------------------------------------------------*/
+
+    /*preguntas frecuentes - tablet*/
+
+    .accordion{
+        margin: 80px 0 100px 0;
+    }
+    .formPregFrec{
+        margin: 10px 50px 50px 50px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .tittleFormPreg{
+        margin-bottom: 20px;
+    }
+    .containerFormInput{
+    flex-direction: row;
+    justify-content: center;
+    }
+
+    .inputFlex{
+        height: 50px;
+        width: 35%;
+        margin: 0px 5px 10px 5px;
+        text-align: center;
+    }
+    textarea{
+        width: 70%;
+        height: 120px;
+    }
+
+    .enviarForm{
+        width: 70%;
+        letter-spacing: 10px;
+        font-weight: bolder;
+    }
+
+}
+
+/*fin de media query tablet*/
+
+/*----------------------------------------------------*/
+
+/*media query - desktop - */
+@media (min-width:990px){
+
+    /*FOOTER - desktop*/
+    .containerRedes{
+        display: none;
+    }
+
+    /*grid secciones footer*/
+    .sectionGridFoot{
+        grid-template-areas:
+        "sec"
+        "textos"
+        "textos";
+    }
+
+    /*fin de grid secciones footer*/
+    .sectionFooter{
+        flex-direction: column;
+        align-items: center;
+    }
+    .FooterLi{
+        margin: 15px 0;
+    }
+    .FooterA:hover{
+        color: #BE3144;
+    }
+
+    /******************************************/
+
+    /*grillas - desktop*/
+
+    /*grilla - index*/
+
+    .gridContainerIndex{
+
+        grid-template-areas: 
+        "header      header      "
+        "contIndex   contIndex   "
+        "asideRedes  sectionIndex"
+        "footer      footer      ";
+        grid-template-rows: 135px 700px 1500px auto;
+        grid-template-columns: 12% 4fr ;  
+    }
+
+    /*----------------------------------------------------*/
+
+    /*grilla hardware*/
+
+    .gridContainerHardware{
+        grid-template-areas: 
+        "header header"
+        "asideRedes contHardware"
+        "footer footer";
+        grid-template-rows: 135px 1fr auto;
+        grid-template-columns: 8% auto;
+    }
+
+    /*----------------------------------------------------*/
+
+    /*grilla nosotros*/
+
+    .gridContainerNosotros{
+        display: grid;
+        grid-template-areas: 
+        "header        header"
+        "asideRedes contNosotros"
+        "footer        footer";
+        grid-template-columns: 8% auto;
+        grid-template-rows: 135px 2fr auto;
+
+    } 
+
+    /*----------------------------------------------------*/
+
+    /*grilla preguntas frecuentes*/
+
+    .gridContainerPreguntasFrecuentes{
+        grid-template-areas: 
+        "header     header      "
+        "asideRedes contPregFrec"
+        "asideRedes formPregFrec"
+        "footer     footer      ";
+        grid-template-columns: 8% auto;
+        grid-template-rows: 135px 600px 700px auto;
+    }
+
+    /*----------------------------------------------------*/
+
+    /*barra de redes sociales lateral - desktop*/
+    .asideRedes{
+        display: block;
+    }
+    .containerRedesBarra{
+        position: sticky;
+        top: 50%;
+    }
+    
+    .redesItem{
+        width: 85px;
+        height:60px;
+        padding-top: 5px;
+        padding-left: 7%;
+    
+    }
+    .redesItem:hover {
+        width: 150px;
+        transition: all 0.3s;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        
+    }
+    .redesItem:hover .iconoBarra{
+        display: none;
+    }
+    .item1{
+        background-color: #3b5998;
+    }
+    .item2{
+        background-color: #572364;
+    }
+    .item3{
+        background-color: #00acee;
+    }
+    
+    .nombreRedBarra{
+        display: none;
+        padding-top: 12px;
+        padding-left: 15px;
+        text-decoration: none;
+        font-size: 15px;
+        color: white;
+        text-transform: uppercase;
+    }
+    
+    .redesItem:hover .nombreRedBarra{
+        display: block;
+        color: white;
+        cursor: pointer;
+    }
+
+    /*----------------------------------------------------*/
+
+    /*index - desktop */
+
+    .carruselIndex{
+        margin-top: 0;
+        height: 700px;
+    }
+    .carruselImg{
+        height: 700px;
+    }
+
+    .tlttleNovedades{
+        text-align: center;
+    }
+    .containerCards{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 15px;
+    }
+    .card{
+        margin: 5px;
+
+    }
+
+    .cardButton{
+        text-decoration: none;
+        padding: 10px 25px 10px 25px;
+        border: 1px solid #BE3144;
+
+    }
+    .cardButton:hover{
+        cursor: pointer;
+        background-color: #BE3144;
+        transition: all 1s;
+    }
+
+    /*----------------------------------------------------*/
+
+    /*hardware - desktop*/
+    .tittleHard{
+        width: 60%;
+        margin-top: 50px;
+    }
+
+    /*categorias*/
+    .containerBotones{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .estiloBoton{
+        font-size: 15px;
+    }
+    .botonComponentes{
+        width:90%;
+        padding: 10px 10px 0 7px;
+
+    }
+    .botonComponentes:hover{
+        background-color: #D3D6DB;
+    }
+    .estiloBoton:hover{
+        color: #BE3144;
+    }
+
+    /*productos*/
+    .containerProductos{
+        display: grid;
+        justify-content:center;
+        grid-template-rows: 9.5% 9.5% 9.5% 9.5% 9.5% 9.5% 9.5% 9.5% ;
+    }
+    .marcoProducto{
+    
+        height:250px;
+        width: 900px;  
+        border-radius: 5px;
+        background-color: #fff;
+        padding-top: 10px;
+        padding-left: 10px;
+        border-bottom: 2px solid #2C3333;
+
+    }
+    
+    .contenido {
+        display: grid;
+        grid-template-columns: 25% auto;
+    }
+    .imgProduct{
+        width: 200px;
+        height: 180px;
+    }
+    .informacionProducto{
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        margin-left: 50px;    
+            
+    }
+    .textProducto{
+        font-family: 'Roboto', sans-serif;
+        text-align: justify;
+        font-size: larger;
+        padding: 0;
+        padding-right: 10px;  
+    }
+    .valor{
+        text-align: left;
+    }
+    .botonesComAgre{
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 100px;
+    
+    }
+    
+    
+    .botonComprar{
+        height: 40px;
+        width: 190px;
+        margin-right: 45px;
+    
+    }
+    .botonComprar:hover{
+        border: 1px solid #fff;
+    
+    }
+    .comprar{
+        font-size: 21px;
+    
+    }
+    
+    .botonAgregar{
+        height: 40px;
+        width: 190px;
+    }
+    
+    .botonAgregar:hover{
+        background-color: #BE3144;
+    }
+    .carrito{
+        width: 25px;
+        height: 25px;
+        padding-top: 1px;
+    }
+    /*boton agregar*/
+    .agregar{
+        font-size: 21px;
+    
+    }
+    .botonAgregar:hover .agregar{
+        color: white;
+    }
+
+    /*----------------------------------------------------*/
+
+    /*nosotros - desktop*/
+
+    .tittleNosotros{
+        margin-top: 50px;
+        margin-left: 10%;
+        text-align: left;
+        font-size: auto;
+    
+    
+    }
+    .containerNosotros{
+        flex-direction: row;
+        margin: 0px 130px 75px 130px;
+
+    }
+    .textoNosotros{
+        font-size:23px;
+        margin: 10px 0px;
+        padding: 10px 30px;
+        background-color: #fff;
+        border-bottom: 2px solid #2C3333;
+        margin-top: 50px;
+    
+        
+    }
+    
+    /*----------------------------------------------------*/
+
+    /*preguntas frecuentes - desktop*/
+
+    
+    .tittlePreg{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+    .accordion{
+        margin: 40px 60px 0px 60px;
+    }
+    .formPregFrec{
+        background-color: #fff;
+        border-radius: 5px;
+        margin: 0px 20px 50px 20px;
+        padding-top: 20px;
+        padding-bottom: 0;
+        width: 70%;
+        height: 600px;
+        margin-left: 15%;
+    }
+    .tittleFormPreg{
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        margin-bottom: 15px;
+    }
+    .containerFormInput{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    }
+    .inputFlex{
+        height: 60px;
+        width: 90%;
+        border-radius: 5px;
+        margin: 10px 0;
+        border: none;
+        border-bottom: 2px solid #BE3144;
+        text-align: left;
+    }
+    .inputFlex:hover{
+        background-color: #D3D6DB;
+        transition: all 0.5s;
+    }
+    .containerFormText{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    }
+    textarea{
+        width: 90%;
+        height: 150px;
+        border: none;
+        border-bottom: 2px solid #BE3144;
+    }
+
+    .containerFormSubmit{
+        text-align: center;
+        
+    }
+    .enviarForm{
+        width: 40%;
+        height: 40px;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 4px;
+        background-color: #BE3144;
+        border-radius: 10px;
+    }
+    .enviarForm:hover{
+        width: 90%;
+        transition: all 0.5s;
+    }
+}
+
+    /*media query - desktop xl*/
+@media (min-width: 1135px){
+
+    /*grillas - desktop xl*/
+
+    /*grilla - index*/
+
+    .gridContainerIndex{
+        grid-template-columns: 5% auto;
+        grid-template-rows: 135px 900px 1450px auto;
+    }
+
+
+    /*grilla preguntas frecuentes*/
+
+    .gridContainerPreguntasFrecuentes{
+        grid-template-areas: 
+        "header     header      "
+        "asideRedes contPregFrec"
+        "asideRedes formPregFrec"
+        "footer     footer      ";
+        grid-template-columns: 5% auto;
+    }
+    
+    /*----------------------------------------------------*/
+
+    /*index - desktop xl*/
+
+    .carruselIndex{
+        margin-bottom: 300px;
+        height: 845px;
+        border-bottom: 5px solid #3A4750;
+    }
+    .carruselImg{
+        height: 840px;
+    }
+    .tittleNovedades{
+        margin: 50px 0 0 0;
+        font-size: 50px;
+        letter-spacing: 10px;
+        color: #3A4750;
+    }
+    .containerCards{
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+
+    }
+    .card{
+        width:300px;
+        margin: 60px 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    
+    }  
+    .cardButton{
+        width: 200px;
+        margin-bottom: 50px;
+    }
+    .cardButton:hover{
+        width: 300px;
+        font-size: 20px;
+        font-weight: bolder;
+    }  
+
+    /*----------------------------------------------------*/
+
+    /*categorias - desktop xl*/
+
+    .containerBotones{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        padding: 0 10px;
+    }
+    .estiloBoton{
+        font-size: 12px;
+        
+    }
+    .botonComponentes{
+        width: 95%;
+        height: 50px;
+    }
+    .containerProductos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .marcoProducto{
+        width:80%;
+        height: 80%;
+    }
+    .imgProduct{
+        width: 220px;
+        height: 200px;
+        margin-left: 50px;
+    }
+    .informacionProducto{
+
+        margin-left: 100px;
+
+    }
+    .textProducto{
+        font-size: 22px;
+    }
+    .valor{
+        margin-top: 25px;
+
+    }
+    .botonesComAgre{
+        margin-bottom: 10px;
+    }
+    .botonComprar{
+        width: 250px;
+        margin-right: 15px ;
+    }
+    .botonAgregar{
+        width: 250px;
+    }
+
+    /*----------------------------------------------------*/
+
+    /*preguntas frecuentes - desktop xl*/
+
+    .accordion{
+        width: 93%;
+    }
+    .textAccordion{
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 2px;
+        padding: 20px;
+    }
+
+    .formPregFrec{
+        margin: 0;
+        width: 93%;
+        margin-left:4%;
+        
+    }
+    .tittleFormPreg{
+        margin-top: 40px;
+        letter-spacing: 2px;
+    }
+    .enviarForm:hover{
+        width: 50%;
+        color: #D3D6DB;
+    }
+
+    /*----------------------------------------------------*/
+
+    /*nosotros - desktop xl*/
+
+    .containerNosotros{
+        flex-direction: column;
+        margin: 0 15px;
+        padding-bottom: 100px;
+    }
+    .textoNosotros{
+        font-size: 20px;
+        width:100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*codigo de pc armadas y contacto que no tiene mobile first*/
+/*se dio grid area a estas secciones pero sus estilos no estas actualizados ni son responsive*/
+/*GRILLA PC ARMADAS*/
+.gridContainerPcArmadas{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    "header     header "
+    "asideRedes contPc "
+    "footer     footer ";
+    grid-template-columns: 8% auto;
+    grid-template-rows: 135px 1fr auto;
+    gap: 5px;
+}
+
+.contPc{
+    grid-area: contPc;
+}
+/*GRILLA CONTACTO*/
+.gridContainerContacto{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    "header       header       "
+    "asideRedes   contContacto "
+    "footer       footer       ";
+    grid-template-columns: 8% auto;
+    grid-template-rows: 135px 1200px auto;
+    gap: 5px;
+}
+.contContacto{
+    grid-area: contContacto;
+}
+
+
+
+/*pc armadas*/
+
+.containerTextoRellenoPC{
+    
+    width: 75%;
+    text-align: center;
+    padding-left: 25%;
+    margin-bottom: 195px;
+}
+.textoRellenoPc{
+    
+    width: 75%;
+    display: block;
+    margin: 45px 0;
+    font-size: large;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+
+    
+}
+
+
+/*contacto*/
+
+.containerInformacion{
+    background-color: beige;
+    width: 50%;
+    height: 60%;
+    margin-left: 25%;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    padding-top: 25px;
+    border-bottom: 3px solid aqua;
+    border-right: 2px solid aqua;
+    border-radius: 7px;
+    background-color: #fff;
+    }
+    .tituloInformacion{
+        margin-bottom: 30px;
+        text-transform: capitalize;
+        font-family: 'Roboto', sans-serif;
+        font-size:20px;
+        text-align: center;
+        margin-top: 40px;
+        
+    }
+    
+    .textoInformacion{
+        text-transform: capitalize;
+        font-family: 'Roboto', sans-serif;
+        padding: 8px 0;
+        font-size:15px;
+        margin-left: 20px;
+        
+    }
+    .containerMapa{
+        margin-left: 25%;
+        width: 50%;
+        margin-top: 25px;
+        margin-bottom: 100px;
+        border-bottom: 2px solid black;
+    }
+    .tituloMapa{
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+        margin-top: 40px;
+        
+    }
+    .mapa{
+        width: 100%;
+        height: 250px;
+    }
+    
+    
+
+
+
+
