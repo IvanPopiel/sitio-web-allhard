@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style/estilos.css">
+    <link rel="stylesheet" href="../style/style.css">
     <title>categorias</title>
 </head>
 <body>
@@ -14,10 +14,11 @@
     <header>
         <!--primer nav bar-->
         <nav class="navbar navbar-light navSearch ">
-            <div class="container-fluid"> 
-                <a class="aLogo" href="../index.html"><span class="estiloLogo">A</span>llH<span class="estiloLogo">4</span>ard</a>
-                <form class="d-flex">
-                    <input class="form-control me-2 barraSearch" type="search"  aria-label="Search">
+            <div class="container-fluid">
+                <a class="aLogo" href="../index.html"><span class="estiloLogo">A</span>llH<span
+                        class="estiloLogo">4</span>ard</a>
+                <form class="barraSearchStyle">
+                    <input class="form-control me-2 barraSearch" type="search" aria-label="Search" placeholder="buscar">
                     <button class="btn btn-outline-success botonBuscar" type="submit">buscar</button>
                 </form>
             </div>
@@ -67,6 +68,12 @@
                             <a class="navA" href="contacto.html">contacto</a>
                         </li>
                     </ul>
+
+                    <form class="barraSearchStyle2">
+                        <input class="form-control me-2 barraSearch" type="search" aria-label="Search" placeholder="buscar">
+                        <button class="btn btn-outline-success botonBuscar" type="submit">buscar</button>
+                    </form>
+
                 </div>
             </div>
         </nav>
@@ -75,25 +82,29 @@
     <main class="contHardware ">
         
         <h1 class="tittleHard">hardware</h1>
-                    <div class="containerBotones contBotonMobile">
-                            <button class="botonComponentes"><a href="#"><p class="estiloBoton"> memoria ram   </p></a></button>
-                            <button class="botonComponentes"><a href="#"><p class="estiloBoton"> fuente        </p></a></button>
-                            <button class="botonComponentes"><a href="#"><p class="estiloBoton"> almacenamiento</p></a></button>
-                            <button class="botonComponentes"><a href="#"><p class="estiloBoton"> procesador    </p></a></button>
-                            <button class="botonComponentes"><a href="#"><p class="estiloBoton">motherboard    </p></a></button>
-                            <button class="botonComponentes"><a href="#"><p class="estiloBoton">placa de video </p></a></button>
-                            <button class="botonComponentes"><a href="#"><p class="estiloBoton">monitores      </p></a></button>
-                            <button class="botonComponentes"><a href="#"><p class="estiloBoton"> gabinetes     </p></a></button>
-                            <button class="botonComponentes"><a href="#"><p class="estiloBoton"> perifericos   </p></a></button>
-                            <button class="botonComponentes"><a href="#"><p class="estiloBoton"> licencias   </p></a></button>
-                    </div>
+        <div class="containerBotones contBotonMobile">
+                <button class="botonComponentes"><a href="#"><p class="estiloBoton"> memoria ram   </p></a></button>
+                <button class="botonComponentes"><a href="#"><p class="estiloBoton"> fuente        </p></a></button>
+                <button class="botonComponentes"><a href="#"><p class="estiloBoton"> almacenamiento</p></a></button>
+                <button class="botonComponentes"><a href="#"><p class="estiloBoton"> procesador    </p></a></button>
+                <button class="botonComponentes"><a href="#"><p class="estiloBoton">motherboard    </p></a></button>
+                <button class="botonComponentes"><a href="#"><p class="estiloBoton">placa de video </p></a></button>
+                <button class="botonComponentes"><a href="#"><p class="estiloBoton">monitores      </p></a></button>
+                <button class="botonComponentes"><a href="#"><p class="estiloBoton"> gabinetes     </p></a></button>
+                <button class="botonComponentes"><a href="#"><p class="estiloBoton"> perifericos   </p></a></button>
+                <button class="botonComponentes"><a href="#"><p class="estiloBoton"> licencias   </p></a></button>
+        </div>
 
                     
 
         <section class="containerProductos">
             <div class="marcoProducto">
                 <div class="contenido">
-                    <a href="#" ><img src="../imagenes/productos/mother-gigabyte-b660m-aorus-pro-ddr4-s1700-0.jpg" alt="motherboard gigabyte" class="imgProduct"></a>
+                    <a href="#" >
+                        <img src="../imagenes/productos/productos-mobile/mother-gigabyte-b660m-aorus-pro-ddr4-s1700-0.jpg" alt="motherboard gigabyte b660m" class="imgProduct1">
+                        <img src="../imagenes/productos/productos-tablet/mother-gigabyte-b660m-aorus-pro-ddr4-s1700-0.jpg" alt="motherboard gigabyte b660m" class="imgProduct2">
+                        <img src="../imagenes/productos/productos-desktop/mother-gigabyte-b660m-aorus-pro-ddr4-s1700-0.jpg" alt="motherboard gigabyte b660m" class="imgProduct3">
+                    </a>
                     <div class="informacionProducto">
                         <p class="textProducto">Mother mother gigabyte b660m aorus pro ddr4 s1700</p>
                         <p class="valor">
@@ -117,7 +128,11 @@
             </div>
             <div class="marcoProducto">
                 <div class="contenido">
-                    <a href="#"><img src="../imagenes/productos/micro-intel-core-i5-12400f-svideo-s1700-0.jpg" alt="micro procesador" class="imgProduct"></a>
+                    <a href="#" >
+                        <img src="../imagenes/productos/productos-mobile/micro-intel-core-i5-12400f-svideo-s1700-0.jpg" alt="intel core i5 12400f" class="imgProduct1">
+                        <img src="../imagenes/productos/productos-tablet/micro-intel-core-i5-12400f-svideo-s1700-0.jpg" alt="intel core i5 12400f" class="imgProduct2">
+                        <img src="../imagenes/productos/productos-desktop/micro-intel-core-i5-12400f-svideo-s1700-0.jpg" alt="intel core i5 12400f" class="imgProduct3">
+                    </a>
                     <div class="informacionProducto">
                         <p class="textProducto">micro intel core i5 12400f svideo s1700 0</p>
                         <p class="valor">
@@ -141,7 +156,11 @@
             </div>
             <div class="marcoProducto">
                 <div class="contenido">
-                    <a href="#"><img src="../imagenes/productos/memoria-16gb-2x8gb-ddr4-3200-corsair-vengeance-pro-rgb-0.jpg" alt="memoria ram en dos modulos" class="imgProduct"></a>
+                    <a href="#" >
+                        <img src="../imagenes/productos/productos-mobile/memoria-16gb-2x8gb-ddr4-3200-corsair-vengeance-pro-rgb-0.jpg" alt="memoria ram en dos modulos" class="imgProduct1">
+                        <img src="../imagenes/productos/productos-tablet/memoria-16gb-2x8gb-ddr4-3200-corsair-vengeance-pro-rgb-0.jpg" alt="memoria ram en dos modulos" class="imgProduct2">
+                        <img src="../imagenes/productos/productos-desktop/memoria-16gb-2x8gb-ddr4-3200-corsair-vengeance-pro-rgb-0.jpg" alt="memoria ram en dos modulos" class="imgProduct3">
+                    </a>
                     <div class="informacionProducto">
                         <p class="textProducto">memoria 16gb 2x8gb ddr4 3200 corsair vengeance pro rgb </p>
                         <p class="valor">
@@ -165,7 +184,11 @@
             </div>
             <div class="marcoProducto">
                 <div class="contenido">
-                    <a href="#"><img src="../imagenes/productos/hd-ssd-1tb-gigabyte-m2-nvme-2280-0.jpg" alt="disco ssd m2 nvme" class="imgProduct"></a>
+                    <a href="#" >
+                        <img src="../imagenes/productos/productos-mobile/hd-ssd-1tb-gigabyte-m2-nvme-2280-0.jpg" alt="disco ssd m2 nvme" class="imgProduct1">
+                        <img src="../imagenes/productos/productos-tablet/hd-ssd-1tb-gigabyte-m2-nvme-2280-0.jpg" alt="disco ssd m2 nvme" class="imgProduct2">
+                        <img src="../imagenes/productos/productos-desktop/hd-ssd-1tb-gigabyte-m2-nvme-2280-0.jpg" alt="disco ssd m2 nvme" class="imgProduct3">
+                    </a>
                     <div class="informacionProducto">
                         <p class="textProducto">hd ssd 1tb gigabyte m2 nvme 2280</p>
                         <p class="valor">
@@ -189,7 +212,11 @@
             </div>
             <div class="marcoProducto">
                 <div class="contenido">
-                    <a href="#"><img src="../imagenes/productos/watercooler-thermaltake-th360-aio-argb-soporta-intel-12-s1700-0.jpg" alt="watercooler de thermaltake" class="imgProduct"></a>
+                    <a href="#" >
+                        <img src="../imagenes/productos/productos-mobile/watercooler-thermaltake-th360-aio-argb-soporta-intel-12-s1700-0.jpg" alt="watercooler de thermaltake" class="imgProduct1">
+                        <img src="../imagenes/productos/productos-tablet/watercooler-thermaltake-th360-aio-argb-soporta-intel-12-s1700-0.jpg" alt="watercooler de thermaltake" class="imgProduct2">
+                        <img src="../imagenes/productos/productos-desktop/watercooler-thermaltake-th360-aio-argb-soporta-intel-12-s1700-0.jpg" alt="watercooler de thermaltake" class="imgProduct3">
+                    </a>
                     <div class="informacionProducto">
                         <p class="textProducto">watercooler thermaltake th360 aio argb soporta intel 12 s1700 </p>
                         <p class="valor">
@@ -213,7 +240,11 @@
             </div>
             <div class="marcoProducto">
                 <div class="contenido">
-                    <a href="#"><img src="../imagenes/productos/video-radeon-rx-6800-xt-16gb-powercolor-red-dragon-0.jpg" alt="tarjeta grafica radeon rx 6800 xt" class="imgProduct"></a>
+                    <a href="#" >
+                        <img src="../imagenes/productos/productos-mobile/video-radeon-rx-6800-xt-16gb-powercolor-red-dragon-0.jpg" alt="tarjeta grafica radeon rx 6800 xt" class="imgProduct1">
+                        <img src="../imagenes/productos/productos-tablet/video-radeon-rx-6800-xt-16gb-powercolor-red-dragon-0.jpg" alt="tarjeta grafica radeon rx 6800 xt" class="imgProduct2">
+                        <img src="../imagenes/productos/productos-desktop/video-radeon-rx-6800-xt-16gb-powercolor-red-dragon-0.jpg" alt="tarjeta grafica radeon rx 6800 xt" class="imgProduct3">
+                    </a>
                     <div class="informacionProducto">
                         <p class="textProducto">video radeon rx 6800 xt 16gb powercolor red dragon</p>
                         <p class="valor">
@@ -237,7 +268,11 @@
             </div>
             <div class="marcoProducto">
                 <div class="contenido">
-                    <a href="#"><img src="../imagenes/productos/gabinete-corsair-5000x-icue-rgb-ql-edition-midtower-white-0.jpg" alt="gabinete corsair" class="imgProduct"></a>
+                    <a href="#" >
+                        <img src="../imagenes/productos/productos-mobile/gabinete-corsair-5000x-icue-rgb-ql-edition-midtower-white-0.jpg" alt="gabinete corsair" class="imgProduct1">
+                        <img src="../imagenes/productos/productos-tablet/gabinete-corsair-5000x-icue-rgb-ql-edition-midtower-white-0.jpg" alt="gabinete corsair" class="imgProduct2">
+                        <img src="../imagenes/productos/productos-desktop/gabinete-corsair-5000x-icue-rgb-ql-edition-midtower-white-0.jpg" alt="gabinete corsair" class="imgProduct3">
+                    </a>
                     <div class="informacionProducto">
                         <p class="textProducto">gabinete corsair 5000x icue rgb ql edition midtower white</p>
                         <p class="valor">
@@ -261,7 +296,11 @@
             </div>
             <div class="marcoProducto">
                 <div class="contenido">
-                    <a href="#"><img src="../imagenes/productos/fuente-850w-msi-mpg-a850gf-80-plus-gold-modular-0.jpg" alt="fuente de 850w msi" class="imgProduct"></a>
+                    <a href="#" >
+                        <img src="../imagenes/productos/productos-mobile/fuente-850w-msi-mpg-a850gf-80-plus-gold-modular-0.jpg" alt="fuente de 850w msi" class="imgProduct1">
+                        <img src="../imagenes/productos/productos-tablet/fuente-850w-msi-mpg-a850gf-80-plus-gold-modular-0.jpg" alt="fuente de 850w msi" class="imgProduct2">
+                        <img src="../imagenes/productos/productos-desktop/fuente-850w-msi-mpg-a850gf-80-plus-gold-modular-0.jpg" alt="fuente de 850w msi" class="imgProduct3">
+                    </a>
                     <div class="informacionProducto">
                         <p class="textProducto">fuente 850w msi mpg a850gf 80 plus gold modular /p>
                         <p class="valor">
@@ -285,7 +324,11 @@
             </div>
             <div class="marcoProducto">
                 <div class="contenido">
-                    <a href="#"><img src="../imagenes/productos/monitor-26-lg-26wq500b-led-qhd-75hz-hdmi-0.jpg" alt="monitor lg 4k" class="imgProduct"></a>
+                    <a href="#" >
+                        <img src="../imagenes/productos/productos-mobile/monitor-26-lg-26wq500b-led-qhd-75hz-hdmi-0.jpg" alt="monitor lg 4k" class="imgProduct1">
+                        <img src="../imagenes/productos/productos-tablet/monitor-26-lg-26wq500b-led-qhd-75hz-hdmi-0.jpg" alt="monitor lg 4k" class="imgProduct2">
+                        <img src="../imagenes/productos/productos-desktop/monitor-26-lg-26wq500b-led-qhd-75hz-hdmi-0.jpg" alt="monitor lg 4k" class="imgProduct3">
+                    </a>
                     <div class="informacionProducto">
                         <p class="textProducto">monitor 26 lg 26wq500b led qhd 75hz hdmi </p>
                         <p class="valor">
@@ -310,25 +353,28 @@
     </section>
     </main>
 
-    <!--aside bar-->
-    <aside class="asideRedes">
+        <!--aside bar-->
+        <aside class="asideRedes">
 
-        <div class="containerRedesBarra">
-            <div class="redesItem item1">
-                <a href="https://www.facebook.com" class="iconoBarra" target="_blank"><img src="../imagenes/iconosRedes/facebookLogo.svg" alt="logo facebook"></a>
-                <a href="https://www.facebook.com" class="nombreRedBarra" target="_blank">facebook</a>
+            <div class="containerRedesBarra">
+                <div class="redesItem1">
+                    <a href="https://www.facebook.com" class="iconoBarra" target="_blank">
+                        <img src="../imagenes/iconosRedes/icons8-facebook-f.svg" alt="logo facebook" class="iconoSvg"></a>
+                    <a href="https://www.facebook.com" class="nombreRedBarra" target="_blank">facebook</a> 
+                </div>
+                <div class="redesItem2">
+                    <a href="https://www.instagram.com" class="iconoBarra" target="_blank"><img
+                        src="../imagenes/iconosRedes/icons8-instagram.svg" alt="logo instagram" class="iconoSvg"></a>
+                    <a href="https://www.instagram.com" class="nombreRedBarra" target="_blank">instagram</a>
+                </div>
+                <div class="redesItem3">
+                    <a href="https://www.twitter.com" class="iconoBarra" target="_blank"><img
+                        src="../imagenes/iconosRedes/icons8-twitter.svg" alt="logo twitter" class="iconoSvg"></a>
+                    <a href="https://www.twitter.com" class="nombreRedBarra" target="_blank">twitter</a>
+                </div>
             </div>
-            <div class="redesItem item2">
-                <a href="https://www.instagram.com" class="iconoBarra" target="_blank"><img src="../imagenes/iconosRedes/instagramLogo.svg" alt="logo instagram"></a>
-                <a href="https://www.instagram.com" class="nombreRedBarra" target="_blank">instagram</a>
-            </div>
-            <div class="redesItem item3">
-                <a href="https://www.twitter.com" class="iconoBarra" target="_blank"><img src="../imagenes/iconosRedes/twitterLogo.svg" alt="logo twitter"></a>
-                <a href="https://www.twitter.com" class="nombreRedBarra" target="_blank">twitter</a>
-            </div>
-        </div>
 
-    </aside>
+        </aside>
 
     <footer>
         <div class="sectionGridFoot"> 
@@ -339,9 +385,9 @@
                 </ul>
             </div>
             <div class="containerRedes redesFoot"> <!--redesFooter es el identificador para la grilla-->
-                <a href="https://www.facebook.com" target="_blank"><img src="../imagenes/iconosRedes/facebookLogo.svg" alt="logo facebook"class="iconoRedes"></a>
-                <a href="https://www.instagram.com" target="_blank"><img src="../imagenes/iconosRedes/instagramLogo.svg" alt="logo instagram"class="iconoRedes"></a>
-                <a href="https://www.twitter.com" target="_blank"><img src="../imagenes/iconosRedes/twitterLogo.svg" alt="logo twitter"class="iconoRedes"></a>
+                <a href="https://www.facebook.com" target="_blank"><img src="../imagenes/iconosRedes/icons8-facebook-f.svg" alt="logo facebook"class="iconoRedes"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="../imagenes/iconosRedes/icons8-instagram.svg" alt="logo instagram"class="iconoRedes"></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="../imagenes/iconosRedes/icons8-twitter.svg" alt="logo twitter"class="iconoRedes"></a>
             </div>
             <div class="textFooter">
                 <p class="avisoFooter">IMPORTANTE: Todas las imágenes de los productos son sólo a modo ilustrativo y pueden diferir del artículo en stock. Los precios indicados tienen IVA incluído y  pueden sufrir variaciones sin previo aviso. Disponibilidad sujeta a stock.</p>

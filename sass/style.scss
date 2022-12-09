@@ -1,0 +1,30 @@
+/*Segunda pre entrega: cambios*/
+/*se aplico mobile first en 3 breakpoints: 0-700px / 700-990px / 990-1135px formando asi version, mobile, tablet, desktop y desktop xl.
+ *las secciones que fueron alcanzadas por el mobile first con sus breakpoint son: index, categorias, nosotros y preguntas frecuentes.
+ *hay 4 html finalizados tanto en estilos como en responsive.
+ *se aplico grid area a todo el sitio, independientemente de que sea o no responsive la section, dentro se utilizo flex y grid en algunos casos.
+ *se uso una paleta de colores: #3A4750 / #303841 / #BE3144 / #D3D6DB /#fff.
+ *se aplicaron animaciones y transiciones con hover, (ej la barra de redes sociales desplgable).
+ *se colocaron img y text real.
+ *se utilizaron componentes de bootstrap 5, siendo estos un nav bar y un accordion.
+ *se modificaron las clases de bootstrap por default cuando era necesario ya que no se pisaban estas con clases propias
+ *con el fin de customizar los componentes, donde si pisaba se agregaron clases propias.
+ *se utilizo z index solo cuando fue indispensable ya que algunos componentes de bts 5 pasaban por arriba de mi css nativo.
+ *hasta poder ordenar mejor el contenido con sass se utilizara ---------------------------------------------------- para poder 
+ *marcar donde empiezan y terminan los estilos de por ej el nav o el footer
+*/
+
+/*tercera pre entrega: cambios*/
+@import "fuentes";
+@import "global";
+@import "header2";
+@import "footer";
+@import "grids";
+@import "index";
+@import "categorias";
+@import "nosotros";
+@import "preguntas";
+
+
+
+

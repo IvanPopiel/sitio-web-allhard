@@ -1,0 +1,93 @@
+/*FOOTER*/
+footer{
+    background-color: #3A4750;
+    padding: 50px 0 0 0;
+    .sectionGridFoot{
+        display:grid;
+        grid-template-areas:
+        "sec"
+        "redes"
+        "textos"
+        "textos";
+        @media(min-width:990px){
+            grid-template-areas:
+            "sec"
+            "textos"
+            "textos";
+        }
+
+        .secFooter{
+            grid-area: sec;
+            .sectionFooter{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                @media(min-width:990px){
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .FooterLi{
+                    list-style-type: none;
+                    padding-right: 32px;
+                    @media(min-width:990px){
+                        margin: 15px 0;
+                    }
+                    .FooterA{
+                        text-decoration: none;
+                        /*color: #00aaad;*/
+                        color: #D3D6DB;
+                        text-transform: uppercase;
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 15px;
+                        @media(min-width:990px){
+                            &:hover{
+                                color: #BE3144;
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+
+        .containerRedes, .redesFoot{
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            grid-area: redes;
+            @media(min-width:990px){
+                display: none;
+            }
+            a{
+                .iconoRedes{
+                    margin: 30px 35px 0 35px;
+                }
+            }
+            
+        }
+
+        .textFooter{
+            grid-area: textos;
+            padding-top: 10px;
+            padding: 0px 50px;
+            .avisoFooter{
+                margin: 25px 0;
+                text-align: center;
+                font-family: 'Roboto', sans-serif;
+                font-size: larger;
+                color: #D3D6DB;
+                padding-bottom: 15px;
+            }
+            .copyright{
+                margin-bottom: 15px;
+                text-align: center;
+                font-family: 'Roboto', sans-serif;
+                font-size: larger;
+                color: #D3D6DB;
+                padding-bottom: 15px;
+            }
+        }
+    }
+}
+/*fin de footer*/
+/*----------------------------------------------------*/
