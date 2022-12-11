@@ -1436,6 +1436,7 @@ footer {
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
   margin: 15px 0;
+  background-color: #fff;
 }
 @media (min-width: 700px) {
   .contContacto section .containerForm .buttonForm {
