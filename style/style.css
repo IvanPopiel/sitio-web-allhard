@@ -414,6 +414,20 @@ footer {
 }
 
 /*----------------------------------------------------*/
+/*grilla - contacto*/
+.gridContainerContacto {
+  width: 100%;
+  height: 100vh;
+  gap: 5px;
+  display: grid;
+  grid-template-areas: "header" "contContacto" "footer";
+}
+
+.contContacto {
+  grid-area: contContacto;
+}
+
+/*----------------------------------------------------*/
 /*grilla - preguntas frecuentes*/
 .gridContainerPreguntasFrecuentes {
   display: grid;
