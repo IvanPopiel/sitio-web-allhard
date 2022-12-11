@@ -64,9 +64,9 @@ body {
     transition: all 0.4s;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    border-top: 2.5px solid #fff;
-    border-bottom: 2.5px solid #fff;
-    border-right: 2.5px solid #fff;
+    border-top: 2.5px solid #D3D6DB;
+    border-bottom: 2.5px solid #D3D6DB;
+    border-right: 2.5px solid #D3D6DB;
   }
   .asideRedes .containerRedesBarra .redesItem1:hover .iconoBarra, .asideRedes .containerRedesBarra .redesItem2:hover .iconoBarra, .asideRedes .containerRedesBarra .redesItem3:hover .iconoBarra {
     display: none;
@@ -205,7 +205,7 @@ header {
     flex-direction: row;
   }
   .navbar-nav {
-    flex-direction: row;
+    flex-direction: column;
   }
   .barraSearchStyle2 {
     display: none;
@@ -367,6 +367,28 @@ footer {
 
 .contHardware {
   grid-area: contHardware;
+}
+
+/*----------------------------------------------------*/
+/*grilla - pc armadas*/
+.gridContainerPcArmadas {
+  height: 100vh;
+  width: 100%;
+  gap: 5px;
+  display: grid;
+  grid-template-areas: "header" "contPc" "footer";
+}
+@media (min-width: 990px) {
+  .gridContainerPcArmadas {
+    grid-template-areas: "header header" "asideRedes contPc" "footer footer";
+    grid-template-columns: 180px auto;
+    grid-template-rows: 135px 2fr auto;
+  }
+}
+
+.contPc {
+  grid-area: contPc;
+  margin-bottom: 100px;
 }
 
 /*----------------------------------------------------*/
@@ -628,6 +650,7 @@ footer {
   margin: 15px 5px;
   padding: 10px 8px 0 7px;
   text-align: center;
+  border: none;
   /*esta media querie fue necesaria para controlar el desbordamiento del boton "placa de video"*/
 }
 @media (min-width: 700px) {
@@ -967,6 +990,197 @@ footer {
   .containerProductos .marcoProducto .botonesComAgre .botonAgregar a .agregar {
     font-size: 21px;
   }
+}
+
+.contPc .tittlePcArmadas {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+@media (min-width: 990px) {
+  .contPc .tittlePcArmadas {
+    margin-top: 50px;
+  }
+}
+@media (min-width: 1135px) {
+  .contPc .tittlePcArmadas {
+    margin-top: 75px;
+    margin-bottom: 75px;
+  }
+}
+.contPc .containerButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 990px) {
+  .contPc .containerButton {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1135px) {
+  .contPc .containerButton {
+    justify-content: center;
+  }
+}
+.contPc .containerButton .buttonPc {
+  width: 80%;
+  height: 50px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+}
+@media (min-width: 990px) {
+  .contPc .containerButton .buttonPc {
+    width: 250px;
+  }
+  .contPc .containerButton .buttonPc:hover {
+    border: 1px solid #BE3144;
+  }
+  .contPc .containerButton .buttonPc:hover .aButton {
+    color: #BE3144;
+    font-size: 22px;
+    transition: all 0.3s;
+    font-weight: bold;
+  }
+}
+@media (min-width: 1135px) {
+  .contPc .containerButton .buttonPc {
+    margin: 0 20px;
+  }
+}
+.contPc .containerButton .buttonPc .aButton {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #2C3333;
+}
+
+.containerPcs {
+  margin-top: 50px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+@media (min-width: 700px) {
+  .containerPcs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 1135px) {
+  .containerPcs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+  }
+}
+.containerPcs .marcoPc {
+  width: 400px;
+  height: 550px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 700px) {
+  .containerPcs .marcoPc {
+    width: 350px;
+    height: 520px;
+    border: 1px solid #2C3333;
+  }
+}
+@media (min-width: 990px) {
+  .containerPcs .marcoPc {
+    width: 285px;
+    height: 470px;
+  }
+}
+@media (min-width: 700px) {
+  .containerPcs .marcoPc a .imgPc1 {
+    display: none;
+  }
+}
+.containerPcs .marcoPc a .imgPc2 {
+  display: none;
+}
+@media (min-width: 700px) {
+  .containerPcs .marcoPc a .imgPc2 {
+    display: block;
+  }
+}
+@media (min-width: 990px) {
+  .containerPcs .marcoPc a .imgPc2 {
+    display: none;
+  }
+}
+.containerPcs .marcoPc a .imgPc3 {
+  display: none;
+}
+@media (min-width: 990px) {
+  .containerPcs .marcoPc a .imgPc3 {
+    display: block;
+  }
+}
+.containerPcs .marcoPc .tituloProducto {
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 700px) {
+  .containerPcs .marcoPc .tituloProducto {
+    width: 90%;
+  }
+}
+.containerPcs .marcoPc .valorProducto {
+  font-size: 26px;
+}
+.containerPcs .marcoPc .buttonAgregar {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 50px;
+  width: 90%;
+  padding-top: 4px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 2px solid #BE3144;
+  background-color: #fff;
+  color: #2C3333;
+}
+@media (min-width: 990px) {
+  .containerPcs .marcoPc .buttonAgregar {
+    margin-right: 10px;
+    width: 80%;
+  }
+  .containerPcs .marcoPc .buttonAgregar:hover {
+    width: 90%;
+    background-color: #BE3144;
+    border: 2px solid #fff;
+    transition: all 0.4s;
+    cursor: pointer;
+  }
+  .containerPcs .marcoPc .buttonAgregar:hover .agregar {
+    color: #fff;
+  }
+}
+.containerPcs .marcoPc .buttonAgregar .carro {
+  width: 32px;
+  height: 32px;
+  margin-right: 5px;
+}
+.containerPcs .marcoPc .buttonAgregar .agregarCarrito {
+  font-size: 23px;
+  text-transform: uppercase;
+  margin-left: 5px;
 }
 
 /*nosotros - mobile*/

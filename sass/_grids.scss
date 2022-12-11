@@ -81,6 +81,34 @@ footer{
     grid-area: contHardware;
 
 }
+/*----------------------------------------------------*/
+
+/*grilla - pc armadas*/
+
+.gridContainerPcArmadas{
+    height: 100vh;
+    width: 100%;
+    gap: 5px;
+    display: grid;
+    grid-template-areas:
+    "header"
+    "contPc"
+    "footer";
+
+    @media(min-width: 990px){
+        grid-template-areas:
+        "header header"
+        "asideRedes contPc"
+        "footer footer";
+        grid-template-columns: 180px auto;
+        grid-template-rows: 135px 2fr auto;
+    }
+}
+.contPc{
+    grid-area: contPc;
+    margin-bottom:100px;
+}
+
 
 /*----------------------------------------------------*/
 
