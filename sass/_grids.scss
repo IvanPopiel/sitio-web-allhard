@@ -150,10 +150,22 @@ footer{
     "header"
     "contContacto"
     "footer";
+    @media (min-width:990px) {
+        grid-template-areas: 
+        "header header"
+        "asideRedes contContacto"
+        "footer footer";
+        grid-template-columns: 160px auto;
+        grid-template-rows: 135px 1500px auto;
+    }
+    @media(min-width: 1135px){
+        grid-template-rows: 135px 1800px auto;
+    }
 }
 
 .contContacto{
     grid-area: contContacto;
+    margin-bottom:100px;
 }
 /*----------------------------------------------------*/
 
