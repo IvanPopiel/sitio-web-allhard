@@ -1,15 +1,13 @@
 /*Preguntas frecuentes - mobile*/
 .contPregFrec{
     .tittlePreg{
-        text-transform: uppercase;
-        font-family: 'Roboto', sans-serif;
+        @extend .estilosTitulosCompartidos;
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin-top: 200px;
-        margin-bottom: 50px;
-        @media (min-width:990px){
+
+        @media (min-width:$MQD){
             margin-top: 50px;
             margin-bottom: 0;
             padding-left: 0;
@@ -20,24 +18,24 @@
     .accordion{
         margin: 80px 50px 100px 50px;
     }    
-    @media (min-width:700px){
+    @media (min-width:$MQT){
         .accordion{
             margin: 80px 0 100px 0;
         }
             
     }
-    @media (min-width:990px){
+    @media (min-width:$MQD){
         .accordion{
             margin: 40px 60px 0px 60px;
         }
             
     }
-    @media (min-width: 1135px){
+    @media (min-width: $MQDXL){
         .accordion{
             width: 93%;
         }
         .textAccordion{
-            font-family: 'Roboto', sans-serif;
+            font-family: $roboto;
             letter-spacing: 2px;
             padding: 20px;
         }
@@ -46,17 +44,17 @@
 
 
 .formPregFrec{
-    background-color: #fff;
+    background-color: $blanco;
     border-radius: 5px;
     margin: 10px 20px 50px 20px;
     padding-top: 20px;
     padding-bottom: 20px;
-    @media (min-width:700px){
+    @media (min-width:$MQT){
         margin: 10px 50px 50px 50px;
         padding-top: 40px;
         padding-bottom: 40px;
     }
-    @media (min-width:990px){
+    @media (min-width:$MQD){
         margin: 0px 20px 50px 20px;
         padding-top: 20px;
         padding-bottom: 0;
@@ -64,22 +62,22 @@
         height: 600px;
         margin-left: 15%;
     }
-    @media (min-width: 1135px){
+    @media (min-width: $MQDXL){
         margin: 0;
         width: 93%;
         margin-left:4%;
     }
     .tittleFormPreg{
         text-align: center;
-        font-family: 'Roboto', sans-serif;
+        font-family: $roboto;
         margin-bottom: 55px;
-        @media (min-width:700px){
+        @media (min-width:$MQT){
             margin-bottom: 20px;
         }
-        @media (min-width:990px){
+        @media (min-width:$MQD){
             margin-bottom: 15px;
         }
-        @media (min-width: 1135px){
+        @media (min-width: $MQDXL){
             margin-top: 40px;
             letter-spacing: 2px;
         }
@@ -90,11 +88,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            @media (min-width:700px){
+            @media (min-width:$MQT){
                 flex-direction: row;
                 justify-content: center;
             }
-            @media (min-width:990px){
+            @media (min-width:$MQD){
                 flex-direction: column;
                 align-items: center;
             }
@@ -104,22 +102,22 @@
                 border-radius: 5px;
                 margin: 10px 0;
                 border: none;
-                border-bottom: 3px solid #BE3144;
-                border-right: 3px solid #BE3144;
-                @media (min-width:700px){
+                border-bottom: 3px solid $rojitoPaleta;
+                border-right: 3px solid $rojitoPaleta;
+                @media (min-width:$MQT){
                     height: 50px;
                     width: 35%;
                     margin: 0px 5px 10px 5px;
                     text-align: center;
                 }
-                @media (min-width:990px){
+                @media (min-width:$MQD){
                     height: 60px;
                     width: 90%;
                     margin: 10px 0;
-                    border-bottom: 2px solid #BE3144;
+                    border-bottom: 2px solid $rojitoPaleta;
                     text-align: left;
                     &:hover{
-                        background-color: #D3D6DB;
+                        background-color: $blancoPaleta;
                         transition: all 0.5s;
                     }
                 }
@@ -136,16 +134,16 @@
                 width: 90%;
                 height: 150px;
                 border: none;
-                border-bottom: 3px solid #BE3144;
-                border-right: 3px solid #BE3144;
-                @media (min-width:700px){
+                border-bottom: 3px solid $rojitoPaleta;
+                border-right: 3px solid $rojitoPaleta;
+                @media (min-width:$MQT){
                     width: 70%;
                     height: 120px;
                 }
-                @media (min-width:990px){
+                @media (min-width:$MQD){
                     width: 90%;
                     height: 150px;
-                    border-bottom: 2px solid #BE3144;
+                    border-bottom: 2px solid $rojitoPaleta;
                 }
             }
         }
@@ -157,16 +155,16 @@
                 width: 90%;
                 height: 40px;
                 text-transform: uppercase;
-                font-family: 'Roboto', sans-serif;
+                font-family: $roboto;
                 letter-spacing: 4px;
-                background-color: #BE3144;
+                background-color: $rojitoPaleta;
                 border-radius: 10px;
-                @media (min-width:700px){
+                @media (min-width:$MQT){
                     width: 70%;
                     letter-spacing: 10px;
                     font-weight: bolder;
                 }
-                @media (min-width:990px){
+                @media (min-width:$MQD){
                     width: 40%;
                     letter-spacing: 4px;
                     &:hover{
@@ -174,10 +172,10 @@
                         transition: all 0.5s;
                     }
                 }
-                @media (min-width: 1135px){
+                @media (min-width: $MQDXL){
                     &:hover{
                         width: 50%;
-                        color: #D3D6DB;
+                        color: $blancoPaleta;
                     }
                 }
             }

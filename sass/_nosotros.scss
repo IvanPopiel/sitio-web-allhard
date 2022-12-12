@@ -2,15 +2,13 @@
 
 .contNosotros{
     .tittleNosotros{
-        font-family: 'Roboto', sans-serif;
-        text-transform: uppercase;
-        margin-top: 180px;
+        @extend .estilosTitulosCompartidos;
         text-align: center;
-        font-size: 50px;
-        @media(min-width:700px){
+
+        @media(min-width:$MQT){
             font-size: 40px;
         }
-        @media(min-width:990px){
+        @media(min-width:$MQD){
             margin-top: 50px;
             margin-left: 10%;
             text-align: left;
@@ -23,14 +21,14 @@
         flex-direction: column;
         margin-top: 75px;
         margin: 75px 15px 0 15px;
-        @media(min-width:700px){
+        @media(min-width:$MQT){
             margin: 50px 35px 0 35px;
         }
-        @media(min-width:990px){
+        @media(min-width:$MQD){
             flex-direction: row;
             margin: 0px 130px 75px 130px;
         }
-        @media(min-width:1135px){
+        @media(min-width:$MQDXL){
             flex-direction: column;
             margin: 0 15px;
             padding-bottom: 100px;
@@ -38,27 +36,27 @@
 
         .textoNosotros{
             width:100%;
-            font-family: 'Roboto', sans-serif;
+            font-family: $roboto;
             font-size: 19px;
             text-align: center;
             letter-spacing: 2px;
             word-spacing: 8px;
             margin: 10px 0;
             padding: 10px;
-            @media(min-width: 700px){
+            @media(min-width: $MQT){
                 font-size: 17px;
                 text-align: justify;
                 margin: 25px 0;
             }
-            @media(min-width:990px){
+            @media(min-width:$MQD){
                 font-size:23px;
                 margin: 10px 0px;
                 padding: 10px 30px;
-                background-color: #fff;
-                border-bottom: 2px solid #2C3333;
+                background-color: $blanco;
+                border-bottom: 2px solid $negroPaleta;
                 margin-top: 50px;
             }
-            @media(min-width:1135px){
+            @media(min-width:$MQDXL){
                 font-size: 20px;
                 width:100%;
             }

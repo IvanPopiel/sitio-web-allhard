@@ -1,0 +1,30 @@
+/*colores*/
+$rojitoPaleta: #BE3144;
+$blancoPaleta: #D3D6DB;
+$negroPaleta: #2C3333;
+$azulPaleta: #3A4750;
+$blanco: #fff;
+$negro: #000;
+
+/*fuentes*/
+$roboto:'Roboto', sans-serif;
+
+/* MQ - SIZE*/
+$MQT: 700px;
+$MQD: 700px + 290px;
+$MQDXL: 700px + 435px;
+
+/*extend*/
+.estilosTitulosCompartidos{
+    text-transform: uppercase;
+    font-family: $roboto;
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+
+/*mixin*/
+
+@mixin tamaño ($width, $height){
+    width: $width;
+    height: $height;
+}

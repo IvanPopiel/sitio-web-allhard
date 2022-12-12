@@ -1,5 +1,5 @@
 .contContacto{
-    @media(min-width:990px){
+    @media(min-width:$MQD){
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -7,7 +7,7 @@
         justify-content: space-around;
         
     }
-    @media(min-width:1135px){
+    @media(min-width:$MQDXL){
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -16,16 +16,14 @@
         
     }
     .tittleContacto{
-        text-transform: uppercase;
-        font-family: 'Roboto', sans-serif;
+        @extend .estilosTitulosCompartidos;
         width: 100%;
         text-align: center;
-        margin-top: 200px;
-        margin-bottom: 50px;
-        @media (min-width:990px) {
+
+        @media (min-width:$MQD) {
             margin-top: 50px;
         }
-        @media (min-width:1135px) {
+        @media (min-width:$MQDXL) {
             margin-bottom: 0;
         }
     }
@@ -33,17 +31,17 @@
 
     section{
         width:100%;
-        @media (min-width:700px) {
+        @media (min-width:$MQT) {
             display: flex;
             flex-direction: column;
             align-items: center;;
             
         }
-        @media(min-width:990px){
+        @media(min-width:$MQD){
             width: 45%;
             align-items: flex-start;
         }
-        @media(min-width:1135px){
+        @media(min-width:$MQDXL){
             width: 45%;
             align-items: flex-start;
         }
@@ -52,19 +50,19 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            border: 1px solid black;
-            background-color: #3A4750;
+            border: 1px solid $negro;
+            background-color: $azulPaleta;
             opacity: 90%;
             margin: 0 25px;
             padding: 20px 0;
             border-radius: 10px;
-            @media(min-width:700px){
+            @media(min-width:$MQT){
                 width: 80%;
                 margin: 0 ;
                 flex-flow: row wrap;
                 justify-content: center;
             }
-            @media(min-width:990px){
+            @media(min-width:$MQD){
                 width: 100%;
                 height: 100%;
                 margin-top: 100px;
@@ -75,10 +73,10 @@
             .tittleForm{
                 margin: 15px 0;
                 text-transform: uppercase;
-                font-family: 'Roboto', sans-serif;
+                font-family: $roboto;
                 font-size: 20px;
-                color: #fff;
-                @media(min-width: 700px){
+                color: $blanco;
+                @media(min-width: $MQT){
                     width: 100%;
                     text-align: center;
                 }
@@ -88,14 +86,14 @@
                 width: 70%;
                 height: 50px;
                 border-radius: 8px;
-                border-bottom: 2px solid #BE3144;
-                border-right: 2.5px solid #BE3144;
+                border-bottom: 2px solid $rojitoPaleta;
+                border-right: 2.5px solid $rojitoPaleta;
                 margin: 15px 0;
-                @media(min-width: 700px){
+                @media(min-width: $MQT){
                     width: 45%;
                     margin: 15px 10px;
                 }
-                @media(min-width:990px){
+                @media(min-width:$MQD){
                     width: 90%;
                 }
                 
@@ -106,12 +104,12 @@
                 height: 150px;
                 margin: 15px 0;
                 border-radius: 5px;
-                border-bottom: 2px solid #BE3144;
-                border-right: 2.5px solid #BE3144;
-                @media(min-width: 700px){
+                border-bottom: 2px solid $rojitoPaleta;
+                border-right: 2.5px solid $rojitoPaleta;
+                @media(min-width: $MQT){
                     width: 93%;
                 }
-                @media(min-width: 990px){
+                @media(min-width: $MQD){
                     width: 90%;
                 }
                 
@@ -121,25 +119,25 @@
                 width: 70%;
                 height: 40px;
                 border-radius: 10px;
-                border: 2px solid #BE3144;
+                border: 2px solid $rojitoPaleta;
                 font-size: 15px;
                 letter-spacing: 7px;
                 text-transform: uppercase;
-                font-family: 'Roboto', sans-serif;
+                font-family: $roboto;
                 margin: 15px 0;
-                background-color: #fff;
-                @media(min-width:700px) {
+                background-color: $blanco;
+                @media(min-width:$MQT) {
                     width: 93%;
                     
                 }
-                @media(min-width:990px) {
+                @media(min-width:$MQD) {
                     width: 45%;
                     &:hover{
                         width: 60%;
                         transition: all 0.5s;
-                        background-color: #BE3144;
-                        border: 2px solid #fff;
-                        color: #fff;
+                        background-color: $rojitoPaleta;
+                        border: 2px solid $blanco;
+                        color: $blanco;
                     }
                 }
             }
@@ -151,17 +149,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        @media(min-width:990px){
+        @media(min-width:$MQD){
             width: 40%;
             margin-left: 20px;
         }
-        @media(min-width:1135px){
+        @media(min-width:$MQDXL){
             width: 45%;
             
         }
         .tittleInfo{
             text-transform: uppercase;
-            font-family: 'Roboto', sans-serif;
+            font-family: $roboto;
             width: 100%;
             text-align: center;
             margin-top: 100px;
@@ -173,7 +171,7 @@
             flex-direction: column;
             align-items: center;
 
-            @media(min-width:700px){
+            @media(min-width:$MQT){
                 font-size: small;
                 display: flex;
                 flex-direction: row;
@@ -181,24 +179,24 @@
                 justify-content: center;
                 padding-left: 80px;
             }
-            @media(min-width:990px){
+            @media(min-width:$MQD){
                 padding-left: 0;
                 
             }
             .info{
-                font-family: 'Roboto', sans-serif;
+                font-family: $roboto;
                 font-size: larger;
                 width: 100%;
-                border-bottom: 1px solid #000;
+                border-bottom: 1px solid $negro;
                 margin-top: 10px;
                 margin-bottom: 20px;
-                @media (min-width:700px) {
+                @media (min-width:$MQT) {
                     width: 45%;
                     height: 150px;
                     border:none;
                     margin: 0 15px;
                 }
-                @media(min-width: 990px){
+                @media(min-width: $MQD){
                     width: 100%;
                 }
             }
@@ -209,12 +207,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        @media(min-width:990px){
+        @media(min-width:$MQD){
             width: 90%;
         }
         .tittleMapa{
             text-transform: uppercase;
-            font-family: 'Roboto', sans-serif;
+            font-family: $roboto;
             width: 100%;
             text-align: center;
             margin-top: 100px;
@@ -225,11 +223,11 @@
             width: 100%;
             height: 250px;
             margin-bottom: 20px;
-            border: 0.5px solid #000;
-            @media (min-width:990px) {
+            border: 0.5px solid $negro;
+            @media (min-width:$MQD) {
                 height: 350px;
             }
-            @media (min-width:1135px) {
+            @media (min-width:$MQDXL) {
                 height: 500px;
 
             }

@@ -14,10 +14,41 @@
  *marcar donde empiezan y terminan los estilos de por ej el nav o el footer
 */
 
-/*tercera pre entrega: cambios*/
+/*tercera pre entrega: correcciones y cambios*/
+/*OBSERVACION IMPORTANTE: hay momentos que cuando aprieto f12 para ver el responsive, el
+ *el sitio anda perfecto y otras en la que se activa un scroll en direccion del eje X, 
+ *no se porque ocurre esto ya que si fuera un error en mi codigo, JAMAS andaria bien, es 
+ *random este problema con el inspector, igualmente en la entrega adjunto algunas fotos de esto.
+
+ *correcciones: 
+ *se recrearon las card, utilizando una foto en html y no css como se aconsejo en la devolucion
+ *se corrigieron los padding/margin - bottom entre el contenido de las secciones y el footer
+ *se corrigio el nav que se rompia al visualizarlo en un celular, haciendo que en mobile
+ *la barra search este junto con las secciones y el logo este centrado, a partir de tablet
+ *la barra vuelva al primer nav.
+ *se corrigio la botonera de la seccion categorias que en mobile se veia rara la disposicion
+ *se corrigio el tamaño de las fotos en la seccion categorias ya que no era acorde y ademas
+ *provocaba que la barra de botones no tomase la forma que debia tomar.
+
+ *cambios:
+ *se creo el contenido entero de las section PC ARMADAS y CONTACTO, teniendo un total de 6 secciones con el html
+ *se aplicacaron los 3 breakpoints en estas nuevas section
+ *se emigro TODO el codigo css a scss
+ *se uso nesting en TODO el codigo, salvo en los componentes de bootstrap
+ *se uso ilove img para corregir tamaño de imagenes
+ *se puso text real e imagenes reales en las secciones que faltaban, pc armadas y contacto
+ *se hizo uso de variables, extend, mixin. Declaradas en OPERACIONES_VARIABLES
+ *las variables se aplicaron para los colores del sitio, las MQ y la font
+ *extend se aplico en todos los h1 ubicado uno por section
+ *mixin se aplico en PC ARMADAS e INDEX
+ *se fueron haciendo los commit para actualizar en git hub
+ *el lighthouse tiro estos valores
+ *
+/*------------------------------------------------*/
+@import "operaciones_variables";
 @import "fuentes";
 @import "global";
-@import "header2";
+@import "header";
 @import "footer";
 @import "grids";
 @import "index";

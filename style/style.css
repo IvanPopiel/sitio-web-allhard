@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Segunda pre entrega: cambios*/
 /*se aplico mobile first en 3 breakpoints: 0-700px / 700-990px / 990-1135px formando asi version, mobile, tablet, desktop y desktop xl.
  *las secciones que fueron alcanzadas por el mobile first con sus breakpoint son: index, categorias, nosotros y preguntas frecuentes.
@@ -13,8 +14,51 @@
  *hasta poder ordenar mejor el contenido con sass se utilizara ---------------------------------------------------- para poder 
  *marcar donde empiezan y terminan los estilos de por ej el nav o el footer
 */
-/*tercera pre entrega: cambios*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"); /*estilos generales*/
+/*tercera pre entrega: correcciones y cambios*/
+/*OBSERVACION IMPORTANTE: hay momentos que cuando aprieto f12 para ver el responsive, el
+ *el sitio anda perfecto y otras en la que se activa un scroll en direccion del eje X, 
+ *no se porque ocurre esto ya que si fuera un error en mi codigo, JAMAS andaria bien, es 
+ *random este problema con el inspector, igualmente en la entrega adjunto algunas fotos de esto.
+
+ *correcciones: 
+ *se recrearon las card, utilizando una foto en html y no css como se aconsejo en la devolucion
+ *se corrigieron los padding/margin - bottom entre el contenido de las secciones y el footer
+ *se corrigio el nav que se rompia al visualizarlo en un celular, haciendo que en mobile
+ *la barra search este junto con las secciones y el logo este centrado, a partir de tablet
+ *la barra vuelva al primer nav.
+ *se corrigio la botonera de la seccion categorias que en mobile se veia rara la disposicion
+ *se corrigio el tamaño de las fotos en la seccion categorias ya que no era acorde y ademas
+ *provocaba que la barra de botones no tomase la forma que debia tomar.
+
+ *cambios:
+ *se creo el contenido entero de las section PC ARMADAS y CONTACTO, teniendo un total de 6 secciones con el html
+ *se aplicacaron los 3 breakpoints en estas nuevas section
+ *se emigro TODO el codigo css a scss
+ *se uso nesting en TODO el codigo, salvo en los componentes de bootstrap
+ *se uso ilove img para corregir tamaño de imagenes
+ *se puso text real e imagenes reales en las secciones que faltaban, pc armadas y contacto
+ *se hizo uso de variables, extend, mixin. Declaradas en OPERACIONES_VARIABLES
+ *las variables se aplicaron para los colores del sitio, las MQ y la font
+ *extend se aplico en todos los h1 ubicado uno por section
+ *mixin se aplico en PC ARMADAS e INDEX
+ *se fueron haciendo los commit para actualizar en git hub
+ *el lighthouse tiro estos valores
+ *
+/*------------------------------------------------*/
+/*colores*/
+/*fuentes*/
+/* MQ - SIZE*/
+/*extend*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+.estilosTitulosCompartidos, .contPregFrec .tittlePreg, .contContacto .tittleContacto, .contNosotros .tittleNosotros, .contPc .tittlePcArmadas, .contHardware .tittleHard {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+/*mixin*/
+/*estilos generales*/
 * {
   padding: 0;
   margin: 0;
@@ -473,43 +517,44 @@ footer {
 
 /*----------------------------------------------------*/
 /*INDEX - MOBILE*/
-.gridItem .carruselIndex, .contIndex .carruselIndex {
+.carruselIndex {
   margin-top: 130px;
 }
+
 @media (min-width: 700px) {
-  .gridItem .carruselIndex, .contIndex .carruselIndex {
+  .carruselIndex {
     width: auto;
     height: 400px;
   }
 }
 @media (min-width: 990px) {
-  .gridItem .carruselIndex, .contIndex .carruselIndex {
+  .carruselIndex {
     margin-top: 0;
     height: 700px;
   }
 }
 @media (min-width: 1135px) {
-  .gridItem .carruselIndex, .contIndex .carruselIndex {
+  .carruselIndex {
     margin-bottom: 300px;
     height: 845px;
     border-bottom: 5px solid #BE3144;
   }
 }
-.gridItem .carruselIndex .carousel-inner .carousel-item .carruselImg, .contIndex .carruselIndex .carousel-inner .carousel-item .carruselImg {
+.carruselImg {
   width: 100%;
   height: 400px;
 }
+
 @media (min-width: 990px) {
-  .gridItem .carruselIndex .carousel-inner .carousel-item .carruselImg, .contIndex .carruselIndex .carousel-inner .carousel-item .carruselImg {
+  .carruselImg {
     height: 700px;
   }
 }
 @media (min-width: 1135px) {
-  .gridItem .carruselIndex .carousel-inner .carousel-item .carruselImg, .contIndex .carruselIndex .carousel-inner .carousel-item .carruselImg {
+  .carruselImg {
     height: 840px;
   }
 }
-
 .sectionIndex .tittleNovedades {
   text-align: center;
   padding-top: 30px;
@@ -572,9 +617,9 @@ footer {
 }
 @media (min-width: 990px) {
   .sectionIndex .containerCards .card {
-    margin: 30px 5px;
     width: 285px;
     height: 285px;
+    margin: 30px 5px;
   }
 }
 @media (min-width: 1135px) {
@@ -605,7 +650,7 @@ footer {
   .sectionIndex .containerCards .card .aButton .cardButton:hover {
     cursor: pointer;
     background-color: #BE3144;
-    transition: all 1s;
+    transition: all 0.5s;
   }
 }
 @media (min-width: 1135px) {
@@ -614,9 +659,9 @@ footer {
     margin-bottom: 50px;
   }
   .sectionIndex .containerCards .card .aButton .cardButton:hover {
-    width: 300px;
+    width: 250px;
     font-size: 20px;
-    font-weight: bolder;
+    font-weight: bold;
   }
 }
 
@@ -625,14 +670,10 @@ footer {
 /*----------------------------------------------------*/
 /*CATEGORIAS - MOBILE*/
 .contHardware .tittleHard {
-  text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 200px;
-  margin-bottom: 50px;
 }
 @media (min-width: 990px) {
   .contHardware .tittleHard {
@@ -1021,10 +1062,6 @@ footer {
 
 .contPc .tittlePcArmadas {
   text-align: center;
-  text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
-  margin-top: 200px;
-  margin-bottom: 50px;
 }
 @media (min-width: 990px) {
   .contPc .tittlePcArmadas {
@@ -1034,7 +1071,7 @@ footer {
 @media (min-width: 1135px) {
   .contPc .tittlePcArmadas {
     margin-top: 75px;
-    margin-bottom: 75px;
+    padding-bottom: 75px;
   }
 }
 .contPc .containerButton {
@@ -1112,17 +1149,18 @@ footer {
 }
 .containerPcs .marcoPc {
   width: 400px;
-  height: 550px;
+  height: 600px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: none;
+  border-radius: 7px;
 }
 @media (min-width: 700px) {
   .containerPcs .marcoPc {
     width: 350px;
     height: 520px;
-    border: 1px solid #2C3333;
   }
 }
 @media (min-width: 990px) {
@@ -1159,6 +1197,7 @@ footer {
 }
 .containerPcs .marcoPc .tituloProducto {
   width: 100%;
+  height: 45px;
   text-align: center;
 }
 @media (min-width: 700px) {
@@ -1170,12 +1209,12 @@ footer {
   font-size: 26px;
 }
 .containerPcs .marcoPc .buttonAgregar {
+  width: 90%;
+  height: 50px;
   text-decoration: none;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 50px;
-  width: 90%;
   padding-top: 4px;
   margin: 8px 0;
   border-radius: 10px;
@@ -1212,11 +1251,7 @@ footer {
 
 /*nosotros - mobile*/
 .contNosotros .tittleNosotros {
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  margin-top: 180px;
   text-align: center;
-  font-size: 50px;
 }
 @media (min-width: 700px) {
   .contNosotros .tittleNosotros {
@@ -1309,12 +1344,8 @@ footer {
   }
 }
 .contContacto .tittleContacto {
-  text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
   width: 100%;
   text-align: center;
-  margin-top: 200px;
-  margin-bottom: 50px;
 }
 @media (min-width: 990px) {
   .contContacto .tittleContacto {
@@ -1352,7 +1383,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid #000;
   background-color: #3A4750;
   opacity: 90%;
   margin: 0 25px;
@@ -1559,14 +1590,10 @@ footer {
 
 /*Preguntas frecuentes - mobile*/
 .contPregFrec .tittlePreg {
-  text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 200px;
-  margin-bottom: 50px;
 }
 @media (min-width: 990px) {
   .contPregFrec .tittlePreg {
